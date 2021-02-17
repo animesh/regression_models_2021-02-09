@@ -1,3 +1,7 @@
+# Information criterion [QIC](https://www.ibm.com/support/knowledgecenter/en/SSLVMB_subs/statistics_casestudies_project_ddita/spss/tutorials/gee_wheeze_fit.html) looks at the model and covariance-matrix of its parameters, the smaller the better! 
+
+# Regression [playlist](https://www.youtube.com/playlist?list=PLrQlMNGpKxZMjRKDiGmLN3Lfjd11v4S_z)
+
 # OCRUG - Modeling Normally Distributed Data with Repeated Measures
 
 **Sharpen your Data Science skills with this is a hands-on workshop on regression techniques in R.**

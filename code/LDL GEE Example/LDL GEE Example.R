@@ -1,4 +1,5 @@
-cholesterol.data<- read.csv(file="LDL GEE Example/LDLData.csv", header=TRUE, sep=",")
+file=paste0(getwd(),"/code/LDL GEE Example/LDLData.csv")
+cholesterol.data<- read.csv(file, header=TRUE, sep=",")
 
 #creating long-form data set
 library(reshape2)
@@ -11,7 +12,7 @@ longform.data<- longform.data[order(longform.data$id),]
 #creating variable for time
 month<- ifelse(longform.data$LDLmonth=="LDL0", 0, ifelse(longform.data$LDLmonth
                                                          =="LDL6", 6, ifelse(longform.data$LDLmonth=="LDL9",9,24)))
-
+install.packages("geepack")
 library(geepack)
 #fitting GEE model with unstructured working correlation matrix
 summary(un.fitted.model<- geeglm(LDL ~ gender + age + month, 

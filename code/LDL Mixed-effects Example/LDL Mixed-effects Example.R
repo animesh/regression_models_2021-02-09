@@ -1,4 +1,5 @@
-cholesterol.data<- read.csv(file="LDL Mixed-effects Example/LDLData.csv", header=TRUE, sep=",")
+file=paste0(getwd(),"/code/LDL Mixed-effects Example/LDLData.csv")
+cholesterol.data<- read.csv(file, header=TRUE, sep=",")
 
 #creating long-form data set
 library(reshape2)
@@ -10,8 +11,7 @@ month<- ifelse(longform.data$LDLmonth=="LDL0", 0, ifelse(longform.data$LDLmonth
                                                          =="LDL6", 6, ifelse(longform.data$LDLmonth=="LDL9",9,24)))
 
 #plotting histogram with fitted normal density
-library(rcompanion)
-plotNormalHistogram(longform.data$LDL)
+hist(longform.data$LDL)
 
 #testing for normality of distribution 
 shapiro.test(longform.data$LDL)
